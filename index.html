@@ -22,11 +22,14 @@
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20231026_143228.jpg-rfMrrzr5CVmy8KKomvpdEiyZqvWdGV.jpeg');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20231026_143228.jpg-rfMrrzr5CVmy8KKomvpdEiyZqvWdGV.jpeg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             color: white;
-            padding: 150px 0;
             text-align: center;
             margin-bottom: 50px;
         }
@@ -81,7 +84,7 @@
             height: 300px;
             object-fit: cover;
             width: 100%;
-            object-position: center top; /* Added to prioritize top of image */
+            object-position: center top;
         }
         
         .memory-card .card-body {
@@ -160,7 +163,7 @@
             width: 100%;
             border-radius: 8px;
             margin-bottom: 15px;
-            object-position: center top; /* Added to prioritize top of image */
+            object-position: center top;
         }
         
         .gallery-section {
@@ -181,11 +184,11 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            object-position: center top; /* Added to prioritize top of image */
+            object-position: center top;
         }
         
         .gallery-item:hover .gallery-img {
-            transform: scale(1.05); /* Reduced from 1.1 to minimize cropping */
+            transform: scale(1.05);
         }
         
         .gallery-caption {
@@ -244,8 +247,8 @@
         .btn-custom {
             background-color: var(--accent-color);
             color: white;
-            border: none;
-            padding: 10px 25px;
+            border: 2px solid white;
+            padding: 12px 30px;
             border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -335,7 +338,25 @@
             margin-left: 8px;
         }
         
-        /* Responsive adjustments */
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
         @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2.5rem;
@@ -363,7 +384,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Happy Birthday Balaji!</h1>
+            <h1>Happy Birthday Balaji ❤️!</h1>
             <p>Celebrating the beautiful memories we've shared together</p>
             <button class="btn btn-custom mt-4">Explore Memories</button>
         </div>
@@ -388,7 +409,6 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="video-container">
-                    <!-- Replace 'your-video.mp4' with the actual path to your video file -->
                     <video id="balaji-video" controls poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20221022_121526.jpg-UmvlaTPS64RJO2lqiCgAJtwEFzj7en.jpeg">
                         <source src="balu.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -462,8 +482,8 @@
                 <div class="memory-card">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20221022_121526.jpg-UmvlaTPS64RJO2lqiCgAJtwEFzj7en.jpeg" alt="Park Day" class="memory-img">
                     <div class="card-body">
-                        <h5 class="card-title">Nature Walks</h5>
-                        <p class="card-text">Those peaceful moments exploring parks and connecting with nature together.</p>
+                        <h5 class="card-title">Queens Land</h5>
+                        <p class="card-text">Those joyful moments exploring queens land and enjoying together.</p>
                     </div>
                 </div>
             </div>
@@ -475,7 +495,6 @@
         <div class="container">
             <h2 class="section-title">Our Journey Together</h2>
             
-            <!-- Timeline Item 1 -->
             <div class="row timeline-item">
                 <div class="col-md-6 timeline-left">
                     <div class="timeline-content">
@@ -487,7 +506,6 @@
                 </div>
             </div>
             
-            <!-- Timeline Item 2 -->
             <div class="row timeline-item">
                 <div class="col-md-6 offset-md-6 timeline-right">
                     <div class="timeline-content">
@@ -499,7 +517,6 @@
                 </div>
             </div>
             
-            <!-- Timeline Item 3 -->
             <div class="row timeline-item">
                 <div class="col-md-6 timeline-left">
                     <div class="timeline-content">
@@ -511,7 +528,6 @@
                 </div>
             </div>
             
-            <!-- Timeline Item 4 -->
             <div class="row timeline-item">
                 <div class="col-md-6 offset-md-6 timeline-right">
                     <div class="timeline-content">
@@ -523,11 +539,10 @@
                 </div>
             </div>
             
-            <!-- Timeline Item 5 -->
             <div class="row timeline-item">
                 <div class="col-md-6 timeline-left">
                     <div class="timeline-content">
-                        <span class="timeline-date">Evening Hangouts</span>
+                        <span class="timeline-date">Group Outings</span>
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231007_115840.jpg-CYQ7xo2mVAu7b3m3tcGBls9stbv2F6.jpeg" alt="Evening Hangout" class="timeline-img">
                         <h4>After Hours</h4>
                         <p>Those evening hangouts that turned into nights filled with laughter and memories.</p>
@@ -622,7 +637,7 @@
                         <div class="gallery-caption">Tech Sessions</div>
                     </div>
                 </div>
-                <div class="col-md-4 col-6">
+                <div class="col-md-4 Caffeinecol-6">
                     <div class="gallery-item">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20221022_143813.jpg-1pIB8N0yEm7pvVTcxEA7wpjGYJkFDL.jpeg" alt="Group Outing" class="gallery-img">
                         <div class="gallery-caption">Group Outings</div>
@@ -651,7 +666,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="card p-4 shadow">
                     <div class="card-body text-center">
-                        <h3 class="mb-4">Dear Balaji,</h3>
+                        <h3 class="mb-4">Dear Balaji(Balu❤️),</h3>
                         <p class="lead">
                             On your special day, we want to celebrate not just another year of your life, but all the wonderful moments we've shared together. Your friendship has been a blessing, and we cherish every adventure, every laugh, and every memory we've created.
                         </p>
@@ -662,7 +677,7 @@
                             May this new year of your life bring you all the happiness, success, and joy that you deserve. May you continue to create beautiful memories and touch lives with your warmth.
                         </p>
                         <p class="lead fw-bold mt-4">
-                            Happy Birthday, dear friend!
+                            Happy Birthday, dear friend! Balu❤️
                         </p>
                         <p class="mt-3">With love and best wishes,</p>
                         <p class="fw-bold">Your Friends</p>
@@ -680,7 +695,12 @@
         </div>
     </footer>
     
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Fullscreen Overlay -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <img class="fullscreen-image" id="fullscreenImage" src="" alt="Fullscreen view">
+    </div>
+    
+    <!-- Bootstrap JS and custom scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Smooth scroll for anchor links
@@ -700,9 +720,8 @@
             });
         });
         
-        // Simple animation for counters
+        // Counter animation
         const counterElements = document.querySelectorAll('.counter-number');
-        
         counterElements.forEach(counter => {
             if (counter.innerText !== '∞') {
                 const target = parseInt(counter.innerText);
@@ -711,7 +730,6 @@
                 const updateCounter = () => {
                     const current = parseInt(counter.innerText);
                     const increment = Math.ceil(target / 20);
-                    
                     if (current < target) {
                         counter.innerText = current + increment;
                         setTimeout(updateCounter, 100);
@@ -720,7 +738,6 @@
                     }
                 };
                 
-                // Start animation when element is in viewport
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -729,7 +746,6 @@
                         }
                     });
                 });
-                
                 observer.observe(counter);
             }
         });
@@ -737,7 +753,6 @@
         // Video overlay functionality
         const videoContainer = document.querySelector('.video-container');
         const video = document.getElementById('balaji-video');
-        
         if (videoContainer && video) {
             videoContainer.addEventListener('click', function() {
                 if (video.paused) {
@@ -746,15 +761,29 @@
                     video.pause();
                 }
             });
-            
             video.addEventListener('play', function() {
                 document.querySelector('.video-overlay').style.opacity = '0';
             });
-            
             video.addEventListener('pause', function() {
                 document.querySelector('.video-overlay').style.opacity = '1';
             });
         }
+        
+        // Fullscreen image functionality
+        const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+        
+        document.querySelectorAll('.gallery-img, .memory-img, .timeline-img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                fullscreenImage.src = this.src;
+                fullscreenOverlay.style.display = 'flex';
+            });
+        });
+
+        fullscreenOverlay.addEventListener('click', function() {
+            this.style.display = 'none';
+        });
     </script>
 </body>
 </html>
